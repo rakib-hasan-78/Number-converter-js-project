@@ -1,5 +1,4 @@
-import {styleFunction} from './style.js';
-styleFunction();
+
 export const numberFormatter =(number, card, cardTitle, resultCircle, resultCounter,resultText)=>{
 
     const givenNumber = number.value;
@@ -11,7 +10,7 @@ export const numberFormatter =(number, card, cardTitle, resultCircle, resultCoun
 
     let result;
 
-    if(givenNumber<0 || isNaN(givenNumber) || givenNumber===''){
+    if(givenNumber<0 || isNaN(givenNumber)){
         card.style.display = 'd-flex';
         cardTitle.style.color = 'var(--bs-form-invalid-color)';
         cardTitle.textContent = 'oh no! error occured!!'.toUpperCase();

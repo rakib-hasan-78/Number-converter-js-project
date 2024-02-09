@@ -19,15 +19,9 @@ export const styleFunction =()=>{
         .pointer{
             cursor:pointer;
         }
-        .display{
-            display:flex !important;
-        }
-        .displayNone{
-            display:none !important;
-        }
     `
     const styleElement = document.createElement('style');
     styleElement.innerHTML = style;
     document.head.appendChild(styleElement);
 
-}
+};

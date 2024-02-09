@@ -4,7 +4,7 @@ export const numberFormatter =(number, card,
      cardTitle, resultCircle, resultCounter,resultText)=>{
 
     const givenNumber = number.value;
-    console.log(givenNumber);
+    console.log(typeof givenNumber);
     let thousand = 1000;
     let million = 1000000;
     let billion = 1000000000;
@@ -12,7 +12,7 @@ export const numberFormatter =(number, card,
 
     let result;
 
-    if(givenNumber<0 || isNaN(givenNumber)){
+    if(isNaN(givenNumber)){
     resultFunction(card, 'd-none', 'd-flex',
      cardTitle, 'd-none', 'd-flex', 'var(--bs-danger)',
       'error occured !must provide a valid number !!',
@@ -44,25 +44,6 @@ export const numberFormatter =(number, card,
                  (givenNumber / trillion).toFixed(1) + 'T'
     }
 
-    card.classList.remove('d-none');
-    card.classList.add('d-flex');
-    cardTitle.classList.remove('d-none');
-    cardTitle.classList.add('d-flex');
-    cardTitle.style.cssText=`
-        color:var(--bs-form-valid-color) !important;
-    `
-    cardTitle.textContent = 'successful!!'.toUpperCase();
-    resultCircle.classList.remove('d-none');
-    resultCircle.classList.add('d-flex');
-    resultCounter.classList.remove('d-none');
-    resultCounter.classList.add('d-flex');
-    resultCounter.innerText= `${result}`;
-    resultText.classList.remove('d-none');
-    resultText.classList.add('d-flex');
-    resultText.style.cssText=`
-        color:var(--bs-form-valid-color) !important;
-        font-weight:600;
-    `;
-    resultText.innerText = `${result} is shortcut of ${givenNumber} `;
+    resultFunction(card, 'd-none', 'd-flex', cardTitle, 'd-none', 'd-flex', 'color:var(--bs-form-valid-color) !important', 'successful', resultCircle, 'd-none', 'd-flex', resultCounter,'d-none', 'd-flex', result, resultText, 'd-none', 'd-flex','color:var(--bs-form-valid-color) !important;', '600', result, givenNumber)
     
 }

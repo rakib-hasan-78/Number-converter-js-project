@@ -2,6 +2,10 @@
 export const styleFunction =()=>{
 
         const style = `
+        :root{
+            --fw-Blod:600;
+            --cs-wait: pointer;
+        }
         #x-icon .fa-x {
             transition: 150ms all ease-in-out;
             color: var(--bs-gray-700);
@@ -18,6 +22,9 @@ export const styleFunction =()=>{
         }
         .pointer{
             cursor:pointer;
+        }
+        .not-allowed{
+            cursor: var(--cs-wait) !important;
         }
     `
     const styleElement = document.createElement('style');

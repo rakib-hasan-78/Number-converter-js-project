@@ -1,8 +1,6 @@
 import {styleFunction} from './style.js';
-import {numberFormatter} from './formatter.js';
-import { resultFunction } from './result.js';
-
-styleFunction();
+import { clickListener } from './clickListener.js';
+import { close } from './close.js';
 
 document.getElementById('root').innerHTML=`
     <header id="header">
@@ -64,22 +62,13 @@ const resultCircle = document.getElementById('result-circle');
 const resultCounter = document.getElementById('result-counter');
 const resultText = document.getElementById('result-text');
 const btn = document.getElementById('btn');
+const xIcon = document.getElementById('x-icon');
 
-btn.addEventListener('click' , (e)=>{
-    e.preventDefault();
-    // ** to deal with empty search -->
-    if (numberInput.value.trim()==='') {
-        resultFunction(card, 'd-none', 'd-flex',
-        title, 'd-none', 'd-flex', 'var(--bs-danger)',
-         'you did not provide any number !!',
-          resultCircle,null, null,resultCounter, null, null,
-           null, resultText, null, null, null, null);
-    }
-    else{
-        numberFormatter(numberInput, card, title, resultCircle, resultCounter, resultText);
-        btn.disabled = true;
-        btn.disabledTitle = "You can  not insert another value right now !";
-        btn.cursor = "pointer";
-        numberInput.value = ''
-    }
-});
+let btnContent = btn.textContent;
+let inputPlaceholder = numberInput.placeholder;
+
+
+
+styleFunction();
+clickListener(btn, numberInput, card, title, resultCircle, resultCounter, resultText);
+xIcon.addEventListener('click', () => close(card, btn, numberInput, btnContent, inputPlaceholder, title, resultCircle, resultText));

@@ -20,6 +20,7 @@ export let resultFunction = (resultCard,none,flex,
         underLine.classList.add(flexFive) || ``;
         underLine.style.color= colorTwo|| ``;
         underLine.style.fontWeight= weight|| ``;
-        underLine.innerText = `${valueTwo} is shortcut of ${givenValue} ` || ``;
-    }
-    
+        underLine.innerText = `${givenValue>1000 ? valueTwo + ' is shortcut of '+givenValue :'n.b. please provide at least 4 digited number (not begins with 0) to get expected result !'}` ;
+}
+
+export const thousand = 1000;

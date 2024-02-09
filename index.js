@@ -1,5 +1,6 @@
 import {styleFunction} from './style.js';
 import {numberFormatter} from './formatter.js';
+import { resultFunction } from './result.js';
 
 styleFunction();
 
@@ -66,9 +67,19 @@ const btn = document.getElementById('btn');
 
 btn.addEventListener('click' , (e)=>{
     e.preventDefault();
-    numberFormatter(numberInput, card, title, resultCircle, resultCounter, resultText);
-    btn.disabled = true;
-    btn.disabledTitle = "You can  not insert another value right now !";
-    btn.cursor = "pointer";
-    numberInput.value = ''
+    // ** to deal with empty search -->
+    if (numberInput.value.trim()==='') {
+        resultFunction(card, 'd-none', 'd-flex',
+        title, 'd-none', 'd-flex', 'var(--bs-danger)',
+         'you did not provide any number !!',
+          resultCircle,null, null,resultCounter, null, null,
+           null, resultText, null, null, null, null);
+    }
+    else{
+        numberFormatter(numberInput, card, title, resultCircle, resultCounter, resultText);
+        btn.disabled = true;
+        btn.disabledTitle = "You can  not insert another value right now !";
+        btn.cursor = "pointer";
+        numberInput.value = ''
+    }
 });

@@ -1,20 +1,25 @@
-card.classList.remove('d-none') || ``;
-card.classList.add('d-flex');
-cardTitle.classList.remove('d-none');
-cardTitle.classList.add('d-flex');
-cardTitle.style.cssText=`
-    color:var(--bs-form-valid-color) !important;
-`
-cardTitle.textContent = 'successful!!'.toUpperCase();
-resultCircle.classList.remove('d-none');
-resultCircle.classList.add('d-flex');
-resultCounter.classList.remove('d-none');
-resultCounter.classList.add('d-flex');
-resultCounter.innerText= `${result}`;
-resultText.classList.remove('d-none');
-resultText.classList.add('d-flex');
-resultText.style.cssText=`
-    color:var(--bs-form-valid-color) !important;
-    font-weight:600;
-`;
-resultText.innerText = `${result} is shortcut of ${givenNumber} `;
+
+export let resultFunction = (resultCard,none,flex, 
+    resultCardTitle, noneTwo, flexTwo,colorOne,textOne,
+    circle, noneThree, flexThree, counter,noneFour, 
+    flexFour,valueOne, underLine, noneFive,flexFive,
+    colorTwo,weight, valueTwo, givenValue) => {
+    
+        resultCard.classList.remove(none) || ``;
+        resultCard.classList.add(flex) || ``;
+        resultCardTitle.classList.remove(noneTwo) || ``;
+        resultCardTitle.classList.add(flexTwo) || ``;
+        resultCardTitle.style.color= colorOne || ``;
+        resultCardTitle.textContent = textOne.toUpperCase() || ``;
+        circle.classList.remove(noneThree) || ``;
+        circle.classList.add(flexThree) || ``;
+        counter.classList.remove(noneFour) || ``;
+        counter.classList.add(flexFour) || ``;
+        counter.innerText= `${valueOne}` || ``;
+        underLine.classList.remove(noneFive) || ``;
+        underLine.classList.add(flexFive) || ``;
+        underLine.style.color= colorTwo|| ``;
+        underLine.style.fontWeight= weight|| ``;
+        underLine.innerText = `${valueTwo} is shortcut of ${givenValue} ` || ``;
+    }
+    

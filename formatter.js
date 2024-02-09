@@ -1,5 +1,7 @@
+import { resultFunction } from "./result.js";
 
-export const numberFormatter =(number, card, cardTitle, resultCircle, resultCounter,resultText)=>{
+export const numberFormatter =(number, card,
+     cardTitle, resultCircle, resultCounter,resultText)=>{
 
     const givenNumber = number.value;
     console.log(givenNumber);
@@ -11,12 +13,11 @@ export const numberFormatter =(number, card, cardTitle, resultCircle, resultCoun
     let result;
 
     if(givenNumber<0 || isNaN(givenNumber)){
-        card.style.display = 'd-flex';
-        cardTitle.style.color = 'var(--bs-form-invalid-color)';
-        cardTitle.textContent = 'oh no! error occured!!'.toUpperCase();
-        resultCircle.style.display='d-none';
-        resultCounter.style.display = 'd-none';
-        resultText.style.display = 'd-none';
+    resultFunction(card, 'd-none', 'd-flex',
+     cardTitle, 'd-none', 'd-flex', 'var(--bs-danger)',
+      'error occured !must provide a valid number !!',
+       resultCircle,null, null,resultCounter, null, null,
+        null, resultText, null, null, null, null);
         return;
     }
 

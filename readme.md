@@ -164,5 +164,5 @@ git clone <repository-url>
 Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests to help improve the functionality and usability of the application. Although it is a ***Mini-Project*** ! Please read the issue list before posting a PR.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.   
+This project is licensed under the MPL-2.0 license - see the LICENSE file for details.   
 

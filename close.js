@@ -7,5 +7,5 @@ export const close = (body, click, input, text, placeholder, title, resultCircle
     let defaultText = text;
     let defaultPlaceholder = placeholder;
     stateChange(click, 'btn-danger','btn-success',defaultText, false, input, false, defaultPlaceholder);
-    resetCode(title, resultCircle, resultText)
+    resetCode(title, resultCircle, resultText);
 };

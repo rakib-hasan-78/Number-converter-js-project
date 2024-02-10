@@ -7,6 +7,4 @@ export const stateChange =(targetClick,presentClass,nextClass,text,firstBoolean,
     targetClick.disabled = firstBoolean;
     input.disabled = secondBoolean;
     input.placeholder = placeholder;
-    
-
 }

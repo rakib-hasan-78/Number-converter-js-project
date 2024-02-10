@@ -12,7 +12,7 @@ document.getElementById('root').innerHTML=`
                         <div class="col-xl-5">
                             <div class="card glass-card p-2 pb-4">
                                 <div class="card-body">
-                                <h3 class="card-title text-center text-capitalize fs-4 fw-bold card-title">covert any number</h3>
+                                <h3 class="card-title text-center text-capitalize fs-4 fw-bold card-title">convert any number</h3>
                                 </div>
                                 <div class="cardE-element">
                                     <input id="number-input" type="text" class="form-control form-control-sm fw-bold fs-5 text-center text-capitalize input-background" placeholder="provide your number to convert"/>
@@ -49,7 +49,7 @@ document.getElementById('root').innerHTML=`
         <main>
         <div class="container pt-5">
             <div class="footer-content pt-5">
-                <p class="lead text-center text-capitalize m-0 p-0 pt-5 card-title">&copy; ${new Date().getFullYear()} all the rights reserved.</p>
+                <p class="lead text-center text-capitalize m-0 p-0 pt-5 card-title fw-bold text-white">&copy; ${new Date().getFullYear()} all the rights reserved.</p>
             </div>
         </div>
         </main>
